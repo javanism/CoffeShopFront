@@ -200,6 +200,29 @@
 		</div>
 	  </div>
 
+
+	  <!-- commentModal -->
+	  <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="commentModalLabel">후기</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="modal-body" id="commentModalBody">
+				<!-- 최근 리뷰가 여기에 표시됩니다. -->
+			  </div>
+			  <textarea id="commentTextarea" placeholder="후기를 입력하세요..." rows="3" class="form-control"></textarea>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+			  <button type="button" class="btn btn-primary" id="submitComment">후기 남기기</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="./js/index.js"></script>
     <script src="./js/member.js"></script>
