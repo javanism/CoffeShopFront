@@ -46,6 +46,8 @@ if (Authorization && nickname) {
   axios.defaults.headers.common['Authorization'] = Authorization; // Authorization 헤더 설정
   document.getElementById("loginSpan").innerHTML = `${nickname}  
   <button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
+}else{
+  
 }
 
 document.getElementById("loginSpan").addEventListener("click", async (event)=>{
@@ -57,3 +59,20 @@ document.getElementById("loginSpan").addEventListener("click", async (event)=>{
       window.location.reload();
   }
 });
+
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
