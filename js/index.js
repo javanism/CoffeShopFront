@@ -17,7 +17,7 @@ window.onload = async () => {
             <img src="img/review.png" alt="review"> 
           </a>
           <p class="card-text text-danger">${item.price}원</p>   
-          <a href="#" class="btn btn-outline-info">장바구니 담기</a>
+          <a href="#" class="btn btn-outline-info" onclick="addToCart(${item.prodcode})">장바구니 담기</a>
         </div>
       </div>`;
   });
